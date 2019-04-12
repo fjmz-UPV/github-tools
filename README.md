@@ -11,6 +11,6 @@ python gt.py -o username password org_name
 
 ### 2. Add users to your team 
 ```
-python gt.py -o username password org_name team_name
+python gt.py -t username password org_name team_name
 ```
 
