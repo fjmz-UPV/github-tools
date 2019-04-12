@@ -60,7 +60,8 @@ class Gitub_Tools:
                         print(res.json()['message'] + ".@ user:" + user_info[0])
                         return False
                 except ValueError:
-                    # when the user is added to the team, there's no response
+                    # when the user is added to the team, there's no response. 
+                    # so .json() will yield a ValueError
                     print('.')
 
             return True
