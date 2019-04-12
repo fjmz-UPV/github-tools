@@ -8,9 +8,11 @@ make sure **members.csv** contains all github usernames to add. Each username is
 ```
 python gt.py -o username password org_name
 ```
-
 ### 2. Add users to your team 
 ```
 python gt.py -t username password org_name team_name
 ```
+
+## 
+Note: ```username``` and ```password``` here are your username and password. Github API requires you to be authenticated in order to add people to your organization/team.
 
