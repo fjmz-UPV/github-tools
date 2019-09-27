@@ -1,0 +1,42 @@
+Operativa:
+
+- CSV con sólo nombres (y apellidos): soloNombresTEST.csv 
+    Preferiblemente ordenados alfabéticamente. 
+    En paralelo tener otro CSV con los mismos nombres y DNI asociados para luego extrapolar cosas más fácilmente a Padrino
+
+- Abrir GitHub Classroom: 
+    - Crear "First Assignment"
+    - Crear un "Individual assignment"
+        Rellenar los datos del ejercicio
+
+    - Ir a "Settings"->"Roster management"
+        * "Upload a CSV or text file" (emplear fichero csv con solo nombres) -> Create Roster
+
+    - Difundir vía email de UPV la URL
+    
+
+Alumno: recibe email con link: cliclar    
+    - Alumno debe autosleccionarse de la lista (cuidado con la elección): NO DARLE A "Skip", seleccionarse de la lista 
+    - Aceptar el ejercicio (Accept this asignament)
+
+    - Con esto, los alumnos se identifican (par nombre-usuarioGitHub) y pasan a ser colaboradores externos de la organización 
+
+Ir a GitHub Classroom -> Settings del ejercicio -> Roster management -> clickar  "Download"  -> "Download without group names"  
+    - De este CSV hay que obtener la columna de los identificadores de GitHub -> fichero colaboradoresExternosGH.csv
+
+
+
+Añadir los colaboradores externos a la organización:
+    python gt.py -o fjmz-UPV XXXXXXXX ORGANIZACION colaboradoresExternosGH.csv 
+
+    (Apareceran X Pending invitations en pestaña members)
+
+    Con esto se envía un email a los email asociados a los id de GitHub y hay que esperar respuesta.
+    Cuando haya click, se añaden automáticamente a "members" desde "outside collaborators"
+
+
+Para distribuir los miembros en grupos
+
+    python gt.py -t fjmz-UPV XXXXXX ORGANIZACION "Grupo todos" miembros.csv
+    python gt.py -t fjmz-UPV XXXXXX ORGANIZACION "Grupo A" miembrosGRUPO_A.csv
+    python gt.py -t fjmz-UPV XXXXXX ORGANIZACION "Grupo B" miembrosGRUPO_B.csv
