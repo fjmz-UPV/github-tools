@@ -64,7 +64,8 @@ class Gitub_Tools:
                     # check if request fails
                     if 'message' in res.json():
                         print(res.json()['message'] + ".@ user:" + user_info[0])
-                        #######return False
+                        continue
+                        return False
                 except ValueError:
                     # when the user is added to the team, there's no response. 
                     # so .json() will yield a ValueError
