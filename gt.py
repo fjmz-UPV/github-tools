@@ -27,7 +27,7 @@ class Gitub_Tools:
                     return False
                 else:
                     print('.') # print a dot to show progre
-                    print(user_info[0]+' añadido a '+self.ORG_NAME)
+                    print(user_info[0]+' anadido a '+self.ORG_NAME)
 
         return True
 
@@ -64,7 +64,7 @@ class Gitub_Tools:
                     # check if request fails
                     if 'message' in res.json():
                         print(res.json()['message'] + ".@ user:" + user_info[0])
-                        return False
+                        #######return False
                 except ValueError:
                     # when the user is added to the team, there's no response. 
                     # so .json() will yield a ValueError
