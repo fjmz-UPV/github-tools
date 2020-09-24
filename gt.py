@@ -24,6 +24,7 @@ class Gitub_Tools:
                 # check if request fails
                 if 'message' in res:
                     print(res['message'] + ".@ user:" + user_info[0])
+                    continue
                     return False
                 else:
                     print('.') # print a dot to show progre
