@@ -20,6 +20,7 @@ class Gitub_Tools:
                 # send request and get response
                 url = "https://" + self.ADMIN + "@api.github.com/orgs/" + \
                         self.ORG_NAME + "/memberships/" +  user_info[0]
+                print('URL: ' + url +'\n')        
                 res = requests.put(url).json()
                 if DEBUG:
                     print(res)
