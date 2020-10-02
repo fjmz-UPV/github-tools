@@ -1,3 +1,5 @@
+# -*- coding: utf8 -*-
+ 
 import csv
 import requests
 import sys
